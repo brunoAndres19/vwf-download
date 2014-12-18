@@ -44,7 +44,7 @@
     <br/>
 
     <ul>
-      <% @files = Dir.glob(["public/files/*.tar.gz","public/files/*.zip","public/files/*.exe"]).sort.reverse %>
+      <% @files = Dir.glob(["public/files/*.tar.gz","public/files/*.zip","public/files/*.exe"]).sort %>
       <% for file in @files %>
         <% new_file = file.to_s %>
         <% new_file = new_file.gsub("public/","") %>
