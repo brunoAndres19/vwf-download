@@ -44,13 +44,7 @@
     <br/>
 
     <ul>
-      <% @files = Dir.glob("public/files/*.tar.gz").sort.reverse %>
-      <% for file in @files %>
-        <% new_file = file.to_s %>
-        <% new_file = new_file.gsub("public/","") %>
-        <li><%= link_to new_file.gsub("files/",""), new_file %></li>
-      <% end %>
-      <% @files = Dir.glob("public/files/*.exe").sort.reverse %>
+      <% @files = Dir.glob(["public/files/*.tar.gz","public/files/*.zip","public/files/*.exe"]).sort.reverse %>
       <% for file in @files %>
         <% new_file = file.to_s %>
         <% new_file = new_file.gsub("public/","") %>
@@ -63,7 +57,7 @@
     <br/>
 
     <ul>
-      <% @files = Dir.glob("public/files/archive/*.zip").sort.reverse %>
+      <% @files = Dir.glob(["public/files/archive/*.tar.gz","public/files/archive/*.zip","public/files/archive/*.exe"]).sort.reverse %>
       <% for file in @files %>
         <% new_file = file.to_s %>
         <% new_file = new_file.gsub("public/","") %>
