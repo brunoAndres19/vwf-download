@@ -1,24 +1,23 @@
-<html>
-<head>
-	
-		<!-- Site CSS/JS Files References -->
+<html><head>
 
-			<link rel="stylesheet" type="text/css" href="http://web.virtual.wf/css/vwf.css">
-			<link rel="stylesheet" type="text/css" href="http://web.virtual.wf/css/bootstrap.min.css">
-			
+  <!-- Site CSS/JS Files References -->
 
-		<!-- SHIM FOR HTML5 Display in early IE browsers -->
-		
-			<!--[if lt IE 9]>
-				<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-			<![endif]-->
-		
-		<!-- Meta Information -->	
-		
-			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-			<meta name="description" content="The Virtual World Framework (VWF) is a fast, light-weight, web-based architecture for creating and distributing secure, scalable, component-based, collaborative virtual spaces. It leverages existing web-based standards, infrastructure, and emerging technologies with the intent of establishing a powerful yet simple to use platform that is built on top of the next generation of web browsers.">	
-			<meta name="keywords" content="virtual worlds, mmo, online gaming, online simulation, browser based gaming, 3d online games, framework, platform, vwf, virtual world framework, 3d browser gaming, html5 games, html5 simulation, webgl games, webgl simulation, websockets framework, webgl framework, webgl platform, chrome games, safari games, firefox games, online 3d simulation, mmo simulation, mmo 3d online, mmo 3d browser, mmo 3d games, mmo 3d framework, webgl mmo">	
-	<script type="text/javascript">
+  <link rel="stylesheet" type="text/css" href="http://web.virtual.wf/css/vwf.css">
+  <link rel="stylesheet" type="text/css" href="http://web.virtual.wf/css/bootstrap.min.css">
+
+  <!-- SHIM FOR HTML5 Display in early IE browsers -->
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Meta Information -->
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="description" content="The Virtual World Framework (VWF) is a fast, light-weight, web-based architecture for creating and distributing secure, scalable, component-based, collaborative virtual spaces. It leverages existing web-based standards, infrastructure, and emerging technologies with the intent of establishing a powerful yet simple to use platform that is built on top of the next generation of web browsers.">
+  <meta name="keywords" content="virtual worlds, mmo, online gaming, online simulation, browser based gaming, 3d online games, framework, platform, vwf, virtual world framework, 3d browser gaming, html5 games, html5 simulation, webgl games, webgl simulation, websockets framework, webgl framework, webgl platform, chrome games, safari games, firefox games, online 3d simulation, mmo simulation, mmo 3d online, mmo 3d browser, mmo 3d games, mmo 3d framework, webgl mmo">
+
+  <script type="text/javascript">
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', "UA-30971226-1"]);
@@ -33,39 +32,45 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-</script></head>
-<body class="downloads-page">
+  </script>
 
-<h1>Downloads</h1>
-<table>
+</head><body class="downloads-page">
 
-<h3>Latest Release Baselines</h3>
-<br/>
-<ul>
-<% @files = Dir.glob("public/files/*.tar.gz").sort.reverse %>
-<% for file in @files %>
-<% new_file = file.to_s %>
-<% new_file = new_file.gsub("public/","") %>
-<li><%= link_to new_file.gsub("files/",""), new_file %></li>
-<% end %>
-<% @files = Dir.glob("public/files/*.exe").sort.reverse %>
-<% for file in @files %>
-<% new_file = file.to_s %>
-<% new_file = new_file.gsub("public/","") %>
-<li><%= link_to new_file.gsub("files/",""), new_file %></li>
-<% end %>
-</ul>
-<br/>
-<h3>Previous Archive Versions</h3>
-<br/>
-<ul>
-<% @files = Dir.glob("public/files/archive/*.zip").sort.reverse %>
-<% for file in @files %>
-<% new_file = file.to_s %>
-<% new_file = new_file.gsub("public/","") %>
-<li><%= link_to new_file.gsub("files/archive/",""), new_file %></li>
-<% end %>
-</ul>
-</table>
-</body>
-</html>
+  <h1>Downloads</h1>
+
+  <table>
+
+    <h3>Latest Release Baselines</h3>
+    <br/>
+
+    <ul>
+      <% @files = Dir.glob("public/files/*.tar.gz").sort.reverse %>
+      <% for file in @files %>
+        <% new_file = file.to_s %>
+        <% new_file = new_file.gsub("public/","") %>
+        <li><%= link_to new_file.gsub("files/",""), new_file %></li>
+      <% end %>
+      <% @files = Dir.glob("public/files/*.exe").sort.reverse %>
+      <% for file in @files %>
+        <% new_file = file.to_s %>
+        <% new_file = new_file.gsub("public/","") %>
+        <li><%= link_to new_file.gsub("files/",""), new_file %></li>
+      <% end %>
+    </ul>
+
+    <br/>
+    <h3>Previous Archive Versions</h3>
+    <br/>
+
+    <ul>
+      <% @files = Dir.glob("public/files/archive/*.zip").sort.reverse %>
+      <% for file in @files %>
+        <% new_file = file.to_s %>
+        <% new_file = new_file.gsub("public/","") %>
+        <li><%= link_to new_file.gsub("files/archive/",""), new_file %></li>
+      <% end %>
+    </ul>
+
+  </table>
+
+</body></html>
