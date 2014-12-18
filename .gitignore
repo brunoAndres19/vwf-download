@@ -13,3 +13,11 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore archive content.
+/public/files/*.tar.gz
+/public/files/*.zip
+/public/files/*.exe
+/public/files/archive/*.tar.gz
+/public/files/archive/*.zip
+/public/files/archive/*.exe
