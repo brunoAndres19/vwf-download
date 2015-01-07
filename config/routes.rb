@@ -1,5 +1,9 @@
 Release::Application.routes.draw do
+
   root :to =>  "home#index"
+
+  get "latest/darwin" => "home#latest"
+  get "latest/linux" => "home#latest"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
